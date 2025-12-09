@@ -1,12 +1,15 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { WorkshopModule } from './modules/workshop/workshop.module';
-import { PrismaModule } from './prisma/prisma.module';
+import { ConfigModule } from '@nestjs/config';
+import { validateConfig } from './common/utils';
+import { WorkshopModule } from './module/workshop/workshop.module';
 
 @Module({
-  imports: [WorkshopModule, PrismaModule],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+      validate: (config) => validateConfig(config),
+    }),
+    WorkshopModule,
+  ],
 })
 export class AppModule {}

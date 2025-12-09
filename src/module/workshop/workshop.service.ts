@@ -1,5 +1,5 @@
+import { PrismaService } from '@common/database/prisma.service';
 import { Injectable } from '@nestjs/common';
-import { PrismaService } from 'src/prisma/prisma.service';
 import { CreateWorkshopDto } from './dto/create-workshop.dto';
 import { UpdateWorkshopDto } from './dto/update-workshop.dto';
 
@@ -16,7 +16,7 @@ export class WorkshopService {
   findAll() {
     return this.prisma.workshop.findMany({
       orderBy: {
-        id: 'desc', // Сортировка по убыванию ID
+        id: 'desc',
       },
     });
   }
