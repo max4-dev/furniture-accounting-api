@@ -1,15 +1,15 @@
 import { IsString, IsNumber, IsOptional } from 'class-validator';
 
-export class UpdateWorkshopDto {
+export class UpdateProductWorkshopDto {
   @IsOptional()
   @IsString()
   name?: string;
 
   @IsOptional()
-  @IsString()
-  type?: string;
+  @IsNumber()
+  productionTime?: number;
 
   @IsOptional()
   @IsNumber()
-  numberWorkers?: number;
+  workshopId?: number;
 }

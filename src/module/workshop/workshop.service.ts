@@ -10,11 +10,17 @@ export class WorkshopService {
   create(createWorkshopDto: CreateWorkshopDto) {
     return this.prisma.workshop.create({
       data: createWorkshopDto,
+      include: {
+        productWorkshop: true,
+      },
     });
   }
 
   findAll() {
     return this.prisma.workshop.findMany({
+      include: {
+        productWorkshop: true,
+      },
       orderBy: {
         id: 'desc',
       },
@@ -22,14 +28,27 @@ export class WorkshopService {
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} workshop`;
+    return this.prisma.workshop.findUnique({
+      where: { id },
+      include: {
+        productWorkshop: true,
+      },
+    });
   }
 
   update(id: number, updateWorkshopDto: UpdateWorkshopDto) {
-    return `This action updates a #${id} workshop`;
+    return this.prisma.workshop.update({
+      where: { id },
+      data: updateWorkshopDto,
+      include: {
+        productWorkshop: true,
+      },
+    });
   }
 
   remove(id: number) {
-    return `This action removes a #${id} workshop`;
+    return this.prisma.workshop.delete({
+      where: { id },
+    });
   }
 }

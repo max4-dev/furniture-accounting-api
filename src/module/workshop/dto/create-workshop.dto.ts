@@ -1,4 +1,4 @@
-import { IsString, IsOptional, IsNotEmpty } from 'class-validator';
+import { IsString, IsNumber, IsOptional, IsNotEmpty } from 'class-validator';
 
 export class CreateWorkshopDto {
   @IsString()
@@ -10,6 +10,6 @@ export class CreateWorkshopDto {
   type: string;
 
   @IsOptional()
-  @IsString()
-  address?: string;
+  @IsNumber()
+  numberWorkers?: number;
 }

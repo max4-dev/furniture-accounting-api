@@ -11,7 +11,7 @@ import { WorkshopService } from './workshop.service';
 import { CreateWorkshopDto } from './dto/create-workshop.dto';
 import { UpdateWorkshopDto } from './dto/update-workshop.dto';
 
-@Controller('workshop')
+@Controller('workshops')
 export class WorkshopController {
   constructor(private readonly workshopService: WorkshopService) {}
 
