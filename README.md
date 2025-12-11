@@ -31,7 +31,6 @@
 
 ## 🛠 Технологии
 
-### Backend
 ```
 ├── NestJS                # Node.js framework
 ├── Prisma                # ORM
