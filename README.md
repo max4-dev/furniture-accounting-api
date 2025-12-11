@@ -1,99 +1,312 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# 🛋️ Furniture Accounting API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+> **REST API для учета мебели и управления производством**  
+> Разработано на NestJS с Prisma ORM
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+[![Made with NestJS](https://img.shields.io/badge/Backend-NestJS-E0234E?logo=nestjs)](https://nestjs.com/)
+[![Database](https://img.shields.io/badge/Database-PostgreSQL-336791?logo=postgresql)](https://www.postgresql.org/)
+[![ORM](https://img.shields.io/badge/ORM-Prisma-2D3748?logo=prisma)](https://www.prisma.io/)
+[![Node.js](https://img.shields.io/badge/Node.js-18+-339933?logo=node.js)](https://nodejs.org/)
+[![Docker](https://img.shields.io/badge/Docker-Supported-2496ED?logo=docker)](https://www.docker.com/)
 
-## Description
+---
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 📋 Содержание
 
-## Project setup
+1. [О проекте](#-о-проекте)
+2. [Возможности](#-возможности)
+3. [Технологии](#-технологии)
+4. [Требования](#-требования)
+5. [Установка](#-установка)
+6. [Запуск приложения](#-запуск-приложения)
+7. [API документация](#-api-документация)
+8. [Структура проекта](#-структура-проекта)
+9. [Разработка](#-разработка)
+10. [Docker](#-docker)
+11. [Решение проблем](#-решение-проблем)
 
-```bash
-$ npm install
+---
+
+## 🎯 О проекте
+
+**Furniture Accounting API** — это REST API для управления учетом мебели и производственными процессами. Система позволяет отслеживать продукты, их типы, материалы, а также управлять цехами и процессами производства.
+
+## 🛠 Технологии
+
+### Backend
+```
+├── NestJS                # Node.js framework
+├── Prisma                # ORM
+├── PostgreSQL            # Relational database
+├── TypeScript            # Type safety
+├── class-validator       # Data validation
+├── Swagger               # API documentation
+└── Docker                # Containerization
 ```
 
-## Compile and run the project
+---
+
+## 📦 Требования
+
+Перед началом работы убедитесь, что у вас установлено:
+
+| Инструмент | Версия | Проверка | Установка |
+|------------|--------|----------|-----------|
+| **Node.js** | 18+ | `node --version` | [nodejs.org](https://nodejs.org/) |
+| **npm** | 9+ | `npm --version` | Устанавливается с Node.js |
+| **Docker Desktop** | Latest | `docker --version` | [docker.com](https://www.docker.com/) |
+| **Git** | Latest | `git --version` | [git-scm.com](https://git-scm.com/) |
+
+---
+
+## 🚀 Установка
+
+### Шаг 1: Клонирование репозитория
 
 ```bash
-# development
-$ npm run start
+# Клонируйте репозиторий
+git clone https://github.com/max4-dev/furniture-accounting-api.git
 
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+# Перейдите в папку проекта
+cd furniture-accounting-api
 ```
 
-## Run tests
+---
+
+### Шаг 2: Установка зависимостей
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+# Установите зависимости
+npm install
 ```
 
-## Deployment
+---
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+### Шаг 3: Настройка базы данных
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+#### С использованием Docker (Рекомендуется) 🐳
+
+**3.1. Запустите PostgreSQL контейнер**
 
 ```bash
-$ npm install -g mau
-$ mau deploy
+# Убедитесь, что Docker Desktop запущен, затем:
+docker-compose up -d
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+**Что произойдет:**
+- 🐳 Запустится PostgreSQL контейнер
+- 📦 Создается база данных `furniture-accounting-db`
+- 🔐 Пользователь: `postgres`, пароль: `postgres`
+- 💾 Данные сохраняются в `./pgdata`
 
-## Resources
+**3.2. Проверка запуска**
 
-Check out a few resources that may come in handy when working with NestJS:
+```bash
+# Просмотрите запущенные контейнеры
+docker ps
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+# Должен быть контейнер 'furniture-accounting-api-postgres'
+```
 
-## Support
+---
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+### Шаг 4: Настройка переменных окружения
 
-## Stay in touch
+Пример файла `.env` находится в корне проекта.
+---
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+### Шаг 5: Применение миграций
 
-## License
+```bash
+npm run prisma:generate
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+npm run prisma:migrate
+```
+
+**Что произойдет:**
+- 📋 Будут созданы таблицы:
+  - `Product` — продукты
+  - `ProductType` — типы продуктов
+  - `Material` — материалы
+  - `ProductWorkshop` — привязка продуктов к цехам
+  - `Workshop` — цеха
+
+---
+
+### Шаг 6: Заполнение тестовыми данными (опционально)
+
+```bash
+# Запустите Prisma seed
+npm run prisma:seed
+```
+
+---
+
+## 🎮 Запуск приложения
+
+### Режим разработки
+
+```bash
+# Запустите сервер с горячей перезагрузкой (hot-reload)
+npm run start:dev
+```
+
+---
+
+### Production режим
+
+```bash
+# Соберите приложение
+npm run build
+
+# Запустите production сборку
+npm run start:prod
+```
+
+---
+
+### Debug режим
+
+```bash
+# Запустите сервер с возможностью отладки
+npm run start:debug
+```
+---
+
+## 📚 API Документация
+
+### Базовый URL
+
+```
+http://localhost:3000
+```
+
+### Документация endpoints (Swagger)
+
+```
+# С запущенным сервером перейдите на:
+http://localhost:3000/api
+```
+
+## 📁 Структура проекта
+
+```
+furniture-accounting-api/
+│
+├── src/
+│   ├── common/               # Общие конфиги и утилиты
+│   │   ├── config/           # Конфигурация приложения
+│   │   ├── database/         # Сервис базы данных
+│   │   └── utils/            # Утилиты и хелперы
+│   │
+│   ├── modules/              # Модули сущностей с CRUD
+│   │   ├── products/         # Модуль продуктов
+│   │   │   ├── products.controller.ts
+│   │   │   ├── products.service.ts
+│   │   │   ├── products.module.ts
+│   │   │   └── dto/
+│   │   │       ├── create-product.dto.ts
+│   │   │       └── update-product.dto.ts
+│   │   │
+│   │   ├── product-types/    # Модуль типов продуктов
+│   │   │   └── [аналогично структуре products]
+│   │   │
+│   │   ├── materials/        # Модуль материалов
+│   │   │   └── [аналогично структуре products]
+│   │   │
+│   │   ├── workshops/        # Модуль цехов
+│   │   │   └── [аналогично структуре products]
+│   │   │
+│   │   └── product-workshops/ # Модуль производства
+│   │       └── [аналогично структуре products]
+│   │
+│   ├── app.module.ts         # Главный модуль приложения
+│   └── main.ts               # Точка входа
+│
+├── prisma/
+│   ├── schema.prisma         # Схема базы данных
+│   ├── migrations/           # Истории миграций
+│   └── seed.ts               # Скрипт заполнения БД
+│
+├── docker-compose.yml        # Конфигурация Docker
+├── .env                      # Переменные окружения
+├── .gitignore                # Игнорирование файлов Git
+├── package.json              # Зависимости и скрипты
+├── tsconfig.json             # Конфигурация TypeScript
+├── tsconfig.build.json       # Конфигурация для сборки
+├── nest-cli.json             # Конфигурация NestJS CLI
+└── README.md                 # Этот файл
+```
+
+---
+
+## 🔧 Разработка
+
+### Доступные команды
+
+```bash
+# Запуск в режиме разработки с hot-reload
+npm run start:dev
+
+# Запуск в режиме отладки
+npm run start:debug
+
+# Запуск production сборки
+npm run start:prod
+
+# Сборка приложения
+npm run build
+
+# Линтер (ESLint)
+npm run lint
+```
+
+---
+
+### Работа с Prisma
+
+```bash
+# Генерация Prisma Client
+npm run prisma:generate
+
+# Создание новой миграции и применение
+npm run prisma:migrate
+
+# Просмотр данных в GUI (Prisma Studio)
+npm run prisma:studio
+
+# Заполнение БД тестовыми данными
+npm run prisma:seed
+```
+
+---
+
+## 🐳 Docker
+
+### Docker Compose
+
+Запустите PostgreSQL в контейнере:
+
+```bash
+# Запустить контейнер
+docker-compose up -d
+
+# Остановить контейнер
+docker-compose down
+
+# Просмотр логов
+docker-compose logs -f postgres
+
+# Перезапустить контейнер
+docker-compose restart
+```
+
+---
+
+## 📚 Дополнительные ресурсы
+
+### Документация
+- [NestJS Documentation](https://docs.nestjs.com/)
+- [Prisma Documentation](https://www.prisma.io/docs/)
+- [PostgreSQL Documentation](https://www.postgresql.org/docs/)
+- [Docker Documentation](https://docs.docker.com/)
