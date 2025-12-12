@@ -1,14 +1,12 @@
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
+  UserOutlined
 } from '@ant-design/icons';
 import { Layout, Menu } from 'antd';
 import { useState } from 'react';
+import { Outlet, useLocation, useNavigate } from 'react-router';
 import styles from './RootLayout.module.css';
-import { useNavigate, useLocation, Outlet } from 'react-router';
 
 const { Header, Sider, Content } = Layout;
 
@@ -19,8 +17,6 @@ export const RootLayout = () => {
 
   const menuItems = [
     { key: '/', icon: <UserOutlined />, label: 'Главная' },
-    { key: '/products', icon: <VideoCameraOutlined />, label: 'Продукты' },
-    { key: '/orders', icon: <UploadOutlined />, label: 'Заказы' },
   ];
 
   return (
