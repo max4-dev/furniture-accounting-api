@@ -1,0 +1,1 @@
+export { productsQuery } from "./query";

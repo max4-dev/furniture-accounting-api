@@ -1,0 +1,1 @@
+export type { ProductTypeDTO } from './../model/types';
