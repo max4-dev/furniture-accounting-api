@@ -10,7 +10,11 @@ export interface ProductDTO {
   id: number;
   typeId: number;
   materialId: number;
+  createdAt: Date;
+  updatedAt: Date;
 }
+
+export type ProductCreateDTO = Omit<ProductDTO, 'id' | 'createdAt' | 'updatedAt' | 'type' | 'material'>;
 
 export interface ProductView {
   id: number;

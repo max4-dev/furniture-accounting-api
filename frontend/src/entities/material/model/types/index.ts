@@ -3,3 +3,5 @@ export interface MaterialDTO {
   id: number;
   missingPercent: number;
 }
+
+export type MaterialCreateDTO = Omit<MaterialDTO, 'id'>;

@@ -1,0 +1,13 @@
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.actions button:first-child {
+  flex: 1;
+}
+
+.actions button:last-child {
+  flex: 1;
+}

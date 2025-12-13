@@ -1,7 +1,9 @@
 import {
+  AppstoreOutlined,
+  CodeSandboxOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
-  UserOutlined
+  TagsOutlined
 } from '@ant-design/icons';
 import { Layout, Menu } from 'antd';
 import { useState } from 'react';
@@ -16,7 +18,9 @@ export const RootLayout = () => {
   const location = useLocation();
 
   const menuItems = [
-    { key: '/', icon: <UserOutlined />, label: 'Главная' },
+    { key: '/', icon: <AppstoreOutlined />, label: 'Продукты' },
+    { key: '/product-types', icon: <TagsOutlined />, label: 'Типы продукта' },
+    { key: '/materials', icon: <CodeSandboxOutlined />, label: 'Материалы' },
   ];
 
   return (
