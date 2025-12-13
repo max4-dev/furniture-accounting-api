@@ -12,11 +12,11 @@ export const useUpdateMaterial = () => {
     mutationFn: ({ id, data }: { id: number; data: MaterialCreateDTO }) =>
       materialsQuery.update(id, data),
     onSuccess: () => {
-      message.success("Тип продукта успешно обновлен");
+      message.success("Успешно обновлено");
       queryClient.invalidateQueries({ queryKey: ['product-types'] });
     },
     onError: () => {
-      message.error("Не удалось обновить тип продукта");
+      message.error("Не удалось обновить");
     },
   });
 };

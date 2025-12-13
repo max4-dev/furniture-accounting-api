@@ -9,11 +9,11 @@ export const useDeleteProductType = () => {
     mutationKey: ['delete-product-type'],
     mutationFn: (id: number) => productTypesQuery.deleteById(id),
     onSuccess: () => {
-      message.success("Тип продукта успешно удален");
+      message.success("Успешно удалено ");
       queryClient.invalidateQueries({ queryKey: ['product-types'] });
     },
     onError: () => {
-      message.error("Не удалось удалить тип продукта");
+      message.error("Не удалось удалить");
     },
   });
 };

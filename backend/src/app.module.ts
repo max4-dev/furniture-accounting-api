@@ -7,6 +7,7 @@ import { ProductTypeModule } from './module/product-type/product-type.module';
 import { ProductWorkshopModule } from './module/product-workshop/product-workshop.module';
 import { ProductModule } from './module/product/product.module';
 import { WorkshopModule } from './module/workshop/workshop.module';
+import { CalculatorModule } from './module/calculator/calculator.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { WorkshopModule } from './module/workshop/workshop.module';
     MaterialModule,
     ProductWorkshopModule,
     WorkshopModule,
+    CalculatorModule,
   ],
 })
 export class AppModule {}

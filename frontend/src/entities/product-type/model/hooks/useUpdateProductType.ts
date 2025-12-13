@@ -12,11 +12,11 @@ export const useUpdateProductType = () => {
     mutationFn: ({ id, data }: { id: number; data: Omit<ProductTypeDTO, 'id'> }) =>
       productTypesQuery.update(id, data),
     onSuccess: () => {
-      message.success("Тип продукта успешно обновлен");
+      message.success("Успешно обновлено");
       queryClient.invalidateQueries({ queryKey: ['product-types'] });
     },
     onError: () => {
-      message.error("Не удалось обновить тип продукта");
+      message.error("Не удалось обновить");
     },
   });
 };

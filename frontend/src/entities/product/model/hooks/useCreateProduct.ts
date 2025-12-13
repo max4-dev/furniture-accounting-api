@@ -11,12 +11,12 @@ export const useCreateProduct = () => {
     mutationKey: ['create-product'],
     mutationFn: (data: ProductCreateDTO) => productsQuery.create(data),
     onSuccess: () => {
-      message.success("Продукт успешно создан");
+      message.success("Успешно создан");
       queryClient.invalidateQueries({ queryKey: ['products'] });
     },
     onError: (error) => {
       console.error(error);
-      message.error("Не удалось создать продукт");
+      message.error("Не удалось создать");
     },
   });
 };

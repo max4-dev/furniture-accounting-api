@@ -1,6 +1,9 @@
 import {
   AppstoreOutlined,
+  BuildOutlined,
+  CalculatorOutlined,
   CodeSandboxOutlined,
+  HomeOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
   TagsOutlined
@@ -21,6 +24,9 @@ export const RootLayout = () => {
     { key: '/', icon: <AppstoreOutlined />, label: 'Продукты' },
     { key: '/product-types', icon: <TagsOutlined />, label: 'Типы продукта' },
     { key: '/materials', icon: <CodeSandboxOutlined />, label: 'Материалы' },
+    { key: '/workshops', icon: <HomeOutlined />, label: 'Мастерские' },
+    { key: '/product-workshops', icon: <BuildOutlined />, label: 'Производства'},
+    { key: '/calculator', icon: <CalculatorOutlined />, label: 'Калькулятор' }, 
   ];
 
   return (

@@ -11,11 +11,11 @@ export const useCreateMaterial = () => {
     mutationKey: ['create-product-type'],
     mutationFn: (data: MaterialCreateDTO) => materialsQuery.create(data),
     onSuccess: () => {
-      message.success("Тип продукта успешно создан");
+      message.success("Успешно создано");
       queryClient.invalidateQueries({ queryKey: ['product-types'] });
     },
     onError: () => {
-      message.error("Не удалось создать тип продукта");
+      message.error("Не удалось создать");
     },
   });
 };

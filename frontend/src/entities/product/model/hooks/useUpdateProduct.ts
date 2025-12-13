@@ -11,7 +11,7 @@ export const useUpdateProduct = () => {
     mutationFn: ({ id, data }: { id: number; data: ProductCreateDTO }) =>
       productsQuery.update(id, data),
     onSuccess: () => {
-      message.success("Продукт успешно обновлен");
+      message.success("Успешно обновлен");
       queryClient.invalidateQueries({ queryKey: ['products'] });
     },
     onError: (error) => {

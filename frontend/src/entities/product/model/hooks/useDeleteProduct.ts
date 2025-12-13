@@ -10,7 +10,7 @@ export const useDeleteProduct = () => {
     mutationFn: productsQuery.deleteById,
     
     onSuccess: () => {
-      message.success("Продукт успешно удален");
+      message.success("Успешно удален");
       
       queryClient.invalidateQueries({ queryKey: ['products'] });
     },

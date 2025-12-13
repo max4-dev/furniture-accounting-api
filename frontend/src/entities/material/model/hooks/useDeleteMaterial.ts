@@ -9,11 +9,11 @@ export const useDeleteMaterial = () => {
     mutationKey: ['delete-product-type'],
     mutationFn: (id: number) => materialsQuery.deleteById(id),
     onSuccess: () => {
-      message.success("Тип продукта успешно удален");
+      message.success("Успешно удалено ");
       queryClient.invalidateQueries({ queryKey: ['product-types'] });
     },
     onError: () => {
-      message.error("Не удалось удалить тип продукта");
+      message.error("Не удалось удалить");
     },
   });
 };
